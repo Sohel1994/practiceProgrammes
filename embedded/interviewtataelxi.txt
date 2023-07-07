@@ -1,0 +1,50 @@
+interview questions?
+
+What is the diff between stucture and union?
+=>stucture allocate memory is sum of decleared data memeber size.
+=>in union memory allocated is shared one for decleared data memebers
+  the shared memory is size of largest data memebers. 
+
+Where the int main retun value goes?
+=>Where does the return value of main go?” 
+The value is returned and stored by the operating system 
+and can be used to guide further actions by the operating system 
+using shell scripts/batch files.
+
+What is file guard?
+file guard avoid redefination of code contain by file which is include in multiple files.
+
+ Different between macros and functions.
+=>Macros are pre-processed which means that 
+all the macros would be processed before your program compiles.
+functions are not preprocessed but compiled.
+
+1)Before Compilation, macro name is replaced by macro value.
+2)Macro does not check any Compile-Time Errors
+3)Macros are useful when small code is repeated many times.
+
+storage class?
+auto = life :- end of block , scope :- within block , init value :- garbage , storage :- stack.
+register = life :-end of block , scope :- within block , init value :- garbage , storage - cpu register.
+static = life :- end of the programme , scope :- within in a file , init value :- 0 , storage - data segment.
+extern = life :- end of the programme , scope :- global multiple files , init value :- 0 , storage - data segment.
+
+Difference between malloc and calloc?
+=>
+1)malloc creates one block of memory of fixed size , syntax (void*) malloc (size_t size);
+calloc creates spacified no of block of for single variable, syntax (void*) calloc ( size_t num , size_t size); 
+2) malloc is faster than calloc because it takes only one argument.
+3) malloc initialize memory block with non zero   
+   calloc initialize memory block with 0.
+4) malloc indicates memory loction 
+   calloc indicates contigous memory location.
+
+    // 
+    int* allocated_with_malloc = malloc(5 * sizeof(int));
+    int* allocated_with_calloc = calloc(5 , sizeof(int));
+    printf("Values of allocated_with_calloc: ");
+    for (size_t i = 0; i < 5; ++i) {
+        printf("%d ", allocated_with_calloc[i]); // output will be zero
+    }
+    free(allocated_with_malloc);
+    free(allocated_with_malloc);
